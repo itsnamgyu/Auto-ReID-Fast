@@ -8,7 +8,7 @@ This is a fast re-implementation of paper [Auto-ReID: Searching for a Part-aware
 
 + This model is tested on Cuda 9.0 9.1 and 10.0 and related cudnn libs on ubuntu server 14 and 16.
 
-+ However, please do not use a batch size smaller than 2*your_gpus, because that will cause bn failure. At the same time, check that your PyTorch > = 1.0 and slurm is installed on your server.
++ However, please do not use a batch size smaller than 2\*your_gpus, because that will cause bn failure. At the same time, check that your PyTorch > = 1.0 and slurm is installed on your server.
 Also, please note that if sub batch size (batch size // world_size) is compared small, it may have a decreased final performance. A preferred setting is batch size 128-512. However, for DARTS searching structures, which may require a higher single card memory, batch_size 16-64 have been tested successfully to get the correct result. 
 
 + The training could be visualized through TensorboardX.
